@@ -33,6 +33,7 @@ end
 
 gem 'bower-rails'
 gem 'angularjs-rails'
+gem 'angular-rails-templates'
 gem 'ngmin-rails'
 gem 'bootstrap-sass-rails'
 gem 'turbolinks'
