@@ -28,9 +28,6 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
-  config.expect_with :rspec do |c|
-    c.synthax = :expect
-  end
 
   config.before(:suite) do
     DatabaseCleaner.clean_with :trunctation
