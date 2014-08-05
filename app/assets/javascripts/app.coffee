@@ -10,6 +10,12 @@ receta = angular.module('receta',[
 receta.config([ '$routeProvider',
   ($routeProvider)->
 
+    flashProvider.errorClassnames.push("alert-danger")
+    flashProvider.warnClassnames.push("alert-warning")
+    flashProvider.infoClassnames.push("alert-info")
+    flashProvider.successClassnames.push("alert-success")
+    
+
     $routeProvider
       .when('/',
         templateUrl: "index.html"

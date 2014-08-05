@@ -4,10 +4,10 @@ describe RecipesController do
   render_views
   describe "index" do
     before do
-      Recipe.create!(name: 'Baked Potato w/ Cheese')
-      Recipe.create!(name: 'Garlic Mashed Potatoes')
-      Recipe.create!(name: 'Potatoes Au Gratin')
-      Recipe.create!(name: 'Baked Brussel Sprouts')
+      Recipe.create(name: 'Baked Potato w/ Cheese')
+      Recipe.create(name: 'Garlic Mashed Potatoes')
+      Recipe.create(name: 'Potatoes Au Gratin')
+      Recipe.create(name: 'Baked Brussel Sprouts')
 
       xhr :get, :index, format: :json, keywords: keywords
     end
