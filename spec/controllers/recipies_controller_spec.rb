@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe RecipiesController do
+describe RecipesController do
   render_views
   describe "index" do
     before do
