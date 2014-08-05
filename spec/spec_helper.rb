@@ -30,7 +30,6 @@ RSpec.configure do |config|
 
 
   config.before(:suite) do
-    DatabaseCleaner.clean_with :trunctation
     DatabaseCleaner.clean_with :transaction
   end
 
@@ -39,7 +38,7 @@ RSpec.configure do |config|
   end
 
   config.around(:each, type: :feature, js: true) do |ex|
-    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.start
     self.use_transactional_fixtures = false
     ex.run
