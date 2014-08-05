@@ -17,7 +17,7 @@ Teaspoon.configure do |config|
 
   # Paths that will be appended to the Rails assets paths
   # Note: Relative to `config.root`.
-  #config.asset_paths = ["spec/javascripts", "spec/javascripts/stylesheets"]
+  config.asset_paths = ["spec/javascripts", "spec/javascripts/stylesheets"]
 
   # Fixtures are rendered through a controller, which allows using HAML, RABL/JBuilder, etc. Files in these paths will
   # be rendered as fixtures.
@@ -50,18 +50,18 @@ Teaspoon.configure do |config|
 
     # This suites spec helper, which can require additional support files. This file is loaded before any of your test
     # files are loaded.
-    #suite.helper = "spec_helper"
+    suite.helper = "spec_helper"
 
     # The core Teaspoon javascripts. It's recommended to include only the base files here, as you can require support
     # libraries from your spec helper.
     # Note: For CoffeeScript files use `"teaspoon/jasmine"` etc.
     #
     # Available: teaspoon-jasmine, teaspoon-mocha, teaspoon-qunit
-    #suite.javascripts = ["jasmine/1.3.1", "teaspoon-jasmine"]
+    suite.javascripts = ["jasmine/1.3.1", "teaspoon-jasmine"]
 
     # You can include your own stylesheets if you want to change how Teaspoon looks.
     # Note: Spec related CSS can and should be loaded using fixtures.
-    #suite.stylesheets = ["teaspoon"]
+    suite.stylesheets = ["teaspoon"]
 
     # Partial to be rendered in the head tag of the runner. You can use the provided ones or define your own by creating
     # a `_boot.html.erb` in your fixtures path, and adjust the config to `"/boot"` for instance.
@@ -105,7 +105,7 @@ Teaspoon.configure do |config|
   # Available: phantomjs, selenium
   # PhantomJS: https://github.com/modeset/teaspoon/wiki/Using-PhantomJS
   # Selenium Webdriver: https://github.com/modeset/teaspoon/wiki/Using-Selenium-WebDriver
-  #config.driver = "phantomjs"
+  config.driver = "phantomjs"
 
   # Specify additional options for the driver.
   #
@@ -115,7 +115,7 @@ Teaspoon.configure do |config|
 
   # Specify the timeout for the driver. Specs are expected to complete within this time frame or the run will be
   # considered a failure. This is to avoid issues that can arise where tests stall.
-  #config.driver_timeout = 180
+  config.driver_timeout = 180
 
   # Specify a server to use with Rack (e.g. thin, mongrel). If nil is provided Rack::Server is used.
   #config.server = nil
@@ -135,14 +135,14 @@ Teaspoon.configure do |config|
   # Note: Output files can be specified by using `"junit>/path/to/output.xml"`.
   #
   # Available: dot, documentation, clean, json, junit, pride, snowday, swayze_or_oprah, tap, tap_y, teamcity
-  #config.formatters = ["dot"]
+  config.formatters = ["documentation"]
 
   # Specify if you want color output from the formatters.
-  #config.color = true
+  config.color = true
 
   # Teaspoon pipes all console[log/debug/error] to $stdout. This is useful to catch places where you've forgotten to
   # remove them, but in verbose applications this may not be desirable.
-  #config.suppress_log = false
+  config.suppress_log = true
 
   # COVERAGE REPORTS / THRESHOLD ASSERTIONS
   #
