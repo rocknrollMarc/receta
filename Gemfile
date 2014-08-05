@@ -21,6 +21,8 @@ group :test, :development do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
   gem 'pry-rails'
+  gem 'teaspoon'
+  gem 'phantomjs'
 end
 
 gem 'foreman'
