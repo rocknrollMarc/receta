@@ -4,7 +4,6 @@ describe "RecipeController", ->
   routeParams  = null
   httpBackend  = null
   flash        = null
-  location     = null
   recipeId     = 42
 
   fakeRecipe   =
